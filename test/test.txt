@@ -1,0 +1,46 @@
+5 5 7
+DEFAULT
+A
+AA
+B
+BB
+C
+CC
+D
+DD
+EE
+EE
+E
+FF
+FF
+F
+GGG
+
+Program yang dibuat menggunakan pendekatan brute force murni, tanpa heuristik atau optimasi tambahan. Berikut adalah langkah-langkah detailnya:
+
+1. Membaca File Input:
+Program dimulai dengan membaca file input yang berisi informasi tentang papan dan potongan puzzle. File input memiliki format tertentu, yaitu:
+Baris pertama: dimensi papan (N x M) dan jumlah potongan (P).
+Baris kedua: jenis kasus (DEFAULT/CUSTOM/PYRAMID).
+Baris selanjutnya: bentuk setiap potongan, diwakili oleh karakter huruf.
+
+2. Inisialisasi Papan dan Potongan:
+Setelah membaca file input, program menginisialisasi papan sebagai grid kosong dengan ukuran yang telah ditentukan.
+Potongan-potongan puzzle diinisialisasi berdasarkan bentuk yang diberikan. Setiap potongan direpresentasikan sebagai daftar koordinat sel yang terisi.
+
+3. Menempatkan Potongan:
+Program mencoba menempatkan setiap potongan di setiap posisi yang mungkin di papan. Ini dilakukan dengan iterasi melalui semua sel di papan dan mencoba semua rotasi yang mungkin.
+Jika suatu potongan dapat ditempatkan di posisi tertentu tanpa bertabrakan dengan potongan lain, program melanjutkan ke potongan berikutnya.
+Jika tidak, program mencoba posisi atau rotasi lain.
+
+4. Backtracking:
+Jika penempatan suatu potongan menyebabkan tidak ada solusi yang valid untuk potongan berikutnya, program melakukan backtracking. Artinya, program menghapus potongan tersebut dan mencoba posisi atau rotasi lain.
+Proses ini diulang sampai semua kemungkinan penempatan potongan telah dicoba.
+
+5. Mencari Solusi:
+Program terus mencoba semua kemungkinan penempatan potongan sampai solusi ditemukan atau semua kemungkinan telah diuji.
+Jika solusi ditemukan, program menampilkan konfigurasi papan yang berhasil diisi.
+Jika tidak ada solusi, program menampilkan pesan "No solution found".
+
+6. Menampilkan Hasil:
+Setelah menemukan solusi, program menampilkan waktu pencarian dan jumlah kasus yang ditinjau.

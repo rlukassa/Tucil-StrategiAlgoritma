@@ -1,0 +1,10 @@
+4 4 4
+DEFAULT
+X
+XX
+Y
+YY
+Z
+ZZ
+W
+WW
